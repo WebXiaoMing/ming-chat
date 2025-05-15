@@ -1,1 +1,27 @@
 POST http://localhost:8888/api/auth/signin HTTP/1.1
+
+
+###
+
+POST http://localhost:8888/api/auth/signup HTTP/1.1
+
+###
+
+GET http://localhost:8888/api/chat/list HTTP/1.1
+
+
+###
+
+POST http://localhost:8888/api/chat/create HTTP/1.1
+
+###
+
+DELETE http://localhost:8888/api/chat/delete/123 HTTP/1.1
+
+###
+
+GET http://localhost:8888/api/messages/123 HTTP/1.1
+
+###
+
+POST http://localhost:8888/api/messages/123 HTTP/1.1
