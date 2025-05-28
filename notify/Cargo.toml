@@ -1,5 +1,5 @@
 [package]
-name = "server"
+name = "notify"
 authors.workspace = true
 version.workspace = true
 edition.workspace = true
@@ -7,14 +7,15 @@ license.workspace = true
 
 [dependencies]
 anyhow.workspace = true
-argon2 = { version = "0.5.3", features = ["std"] }
 axum.workspace = true
-chrono = { version = "0.4.41", features = ["serde"] }
+axum-extra = { version = "0.10.1", features = ["typed-header"] }
+futures = "0.3.31"
+headers = "0.4.0"
 serde.workspace = true
-serde_yaml = "0.9.34"
-sqlx.workspace = true
 thiserror.workspace = true
 tokio.workspace = true
+tokio-stream = "0.1.17"
+tower-http.workspace = true
 tracing.workspace = true
 tracing-appender.workspace = true
 tracing-subscriber.workspace = true

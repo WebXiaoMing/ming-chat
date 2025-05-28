@@ -1,7 +1,11 @@
 mod config;
+mod error;
 mod handlers;
+mod models;
 mod routes;
+mod services;
 mod state;
+mod utils;
 
 use axum::Router;
 use tokio::net::TcpListener;
@@ -11,6 +15,8 @@ pub use state::AppState;
 use tracing::level_filters::LevelFilter;
 use tracing_appender::rolling::{RollingFileAppender, Rotation};
 use tracing_subscriber::{EnvFilter, fmt, layer::SubscriberExt as _, util::SubscriberInitExt};
+
+pub static MIGRATOR: sqlx::migrate::Migrator = sqlx::migrate!("../migrations");
 
 pub struct App {
     pub config: AppConfig,
